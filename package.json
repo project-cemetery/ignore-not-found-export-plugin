@@ -1,6 +1,6 @@
 {
   "name": "ignore-not-found-export-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack plugin for supressing warnings for exported interfaces",
   "main": "index.js",
   "repository": "git@github.com:igorkamyshev/ignore-not-found-export-plugin.git",

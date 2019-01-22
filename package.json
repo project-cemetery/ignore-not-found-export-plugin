@@ -1,0 +1,48 @@
+{
+  "name": "ignore-not-found-export-plugin",
+  "version": "1.0.0",
+  "description": "Webpack plugin for supressing warnings for exported interfaces",
+  "main": "index.js",
+  "repository": "git@github.com:igorkamyshev/ignore-not-found-export-plugin.git",
+  "author": "Igor Kamyshev <igor@kamyshev.me>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint index.js",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-conventional": "^7.3.1",
+    "@solid-soda/eslint-config": "^2.1.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.12.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "standard-version": "^4.4.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint",
+      "git add"
+    ]
+  }
+}

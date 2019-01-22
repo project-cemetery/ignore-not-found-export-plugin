@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+cache: yarn
+script: yarn lint
+deploy:
+  provider: npm
+  email: igor@kamyshev.me
+  api_key:
+    secure: F8LuPw+dhsiQlj/gfs25zE+shjm0oB3KMUW9KqqaY3TXnsWha9r9NrxlWwW9G5Pjr7OKFZK5e7FC1ye7RGIBDC8KXcj7DVvdmpZSE9Tmnba7V5rZijO3DSZt+eocI/ok6ufNwGIWieCW7Hl2RP9DEZiQF04oSJEimEbk5msTE7JuuqYthswZUepbqx0tCf4L8PJUVm+HHUPZT9NumlB55VVzIGt61hObBCBRNKw/kd1yo5HE05vQLI39VRRpkfq6WKIjm/R4qAUJt6WWdDkBHoDGV+UHI5a/fhbK9huuOGwPreQbY0hCf8hpjsQn7I29jM9FDcgcb6VZqgWZHf/mh+1btoeAA+QZOPJU1WQsSqhbQD8Zigyq5WKNTCChh6pdhtNyTaAOy0ieajnJ+AYHGN3vNa+sY9dvQK+jXBOi6iXd1PCaQm1Eoa1MPkhiJKesQ66iWQDy4oP3Y9vRDOGdLjXVHeUFZe8d3fM+bkBfUqjHe2Z1XtYHO5KJO2tFkzWIZ80bqSOmyLq8jME3W59zlZ9S9hoZI+JInkkzxfZ/TnblO3ngZzh9osmzzzyNz4cGsKP6ih00WzvjhK5LUhF65g1Q4SKS2I7wCwiRyQ33WqCP0gHml6kW/bnst1umu2lTSH6+JFla/FRZY8cvp7Kr3QHZAu7dNtWxdiqKPgmHVnc=
+  on:
+    tags: true
+    repo: igorkamyshev/ignore-not-found-export-plugin
